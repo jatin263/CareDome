@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/b1">
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Caredome"
+                android:textSize="@dimen/_50sdp"
+                android:textColor="@color/black"
+                android:textStyle="bold"
+                android:textAlignment="center"
+                android:id="@+id/title"
+                />
+                <FrameLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_below="@id/title">
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+                        <Button
+                            android:id="@+id/emergencyBtn"
+                            android:layout_marginTop="@dimen/_100sdp"
+                            android:layout_width="@dimen/_120sdp"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:onClick="emergencyCall"
+                            android:layout_centerHorizontal="true"
+                            android:text="Emergency Call" />
+                        <Button
+                            android:id="@+id/locationBtn"
+                            android:layout_below="@+id/emergencyBtn"
+                            android:layout_width="@dimen/_120sdp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/_17sdp"
+                            android:layout_gravity="center"
+                            android:onClick="gotoLocationActivity"
+                            android:layout_centerHorizontal="true"
+                            android:text="Location" />
+                        <Button
+                            android:id="@+id/weatherBtn"
+                            android:layout_below="@+id/locationBtn"
+                            android:layout_width="@dimen/_120sdp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/_17sdp"
+                            android:layout_gravity="center"
+                            android:onClick="gotoWeather"
+                            android:layout_centerHorizontal="true"
+                            android:text="Weather" />
+                        <Button
+                            android:id="@+id/safetyTipBtn"
+                            android:layout_below="@+id/weatherBtn"
+                            android:layout_width="@dimen/_120sdp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/_17sdp"
+                            android:layout_gravity="center"
+                            android:onClick="gotoSafetyTips"
+                            android:layout_centerHorizontal="true"
+                            android:text="Safety Tips" />
+                    </RelativeLayout>
+
+                </FrameLayout>
+        </RelativeLayout>
+    </FrameLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
